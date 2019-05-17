@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>遊戲大廳</title>
+<link href="design.css" rel="stylesheet" type="text/css">
+</head>
+
+<script type="text/javascript" src="Javascript.js" charset="BIG5"></script>
+
+<body id="hubBody" onselectstart="return false" onLoad="GameHubOnLoadEvent()">
+
+<audio autoplay loop>
+	<source src="bgm/hubBgm.mp3"></source>
+</audio>
+
+<img src="img/role/role0.png" alt="主人公" id="hubRole">
+<img src="img/item/money.png" alt="$" id="hubMoneyImg"><span id="hubMoney">100000</span>
+<img src="img/item/drug.png" alt="藥水" id="hubDrugImg"><span id="hubDrug">20</span>
+<img src="img/button/lastStageButton.png" alt="上一關" class="hubButton" id="hubLastButton" onClick="LastStage()">
+<img src="img/button/nextStageButton.png" alt="下一關" class="hubButton" id="hubNextButton" onClick="NextStage()">
+<img src="img/button/startBattleButton.png" alt="戰鬥開始" class="hubButton" id="hubBattleStartButton" onClick="OpenStartBattle()">
+<img src="img/button/shopButton.png" alt="商店" class="hubButton" id="hubShopButton" onClick="OpenShop()">
+<img src="img/button/atlasButton.png" alt="圖鑑" class="hubButton" id="hubAtlasButton" onClick="OpenAtlas()">
+
+<div id="contextMenu" onclick="" onmouseout="MouseOut()"  onmouseover="MouseOver()" style="visibility:hidden">
+    <div class="menuItems" onClick="MoneyPlus()">金錢 + 1000</div>
+    <div class="menuItems" onClick="ArmsPlus()">武器升到下一階</div>
+    <div class="menuItems" onClick="ArmsMinus()">武器返回上一階</div>
+</div>
+</body>
+</html>

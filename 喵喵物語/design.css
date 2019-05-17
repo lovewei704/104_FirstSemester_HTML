@@ -1,0 +1,1021 @@
+﻿/*字體*/
+@font-face
+{
+  	font-family: CatFont;
+  	src:url(font/cat.ttf);
+}
+@font-face
+{
+	font-family: CaifongFont;
+	src:url(font/caifong.ttf);
+}
+/*文字淡入*/
+@-webkit-keyframes fadeIn
+{
+    0% {opacity: 0;}/*初始狀態透明度：0*/
+    50% {opacity: 0;}/*中間狀態透明度：0.5*/
+	100% {opacity: 1;}/*結尾狀態透明度：1*/    	
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*返回按鈕(通用)*/
+#backButton/*返回按鈕*/
+{
+	position:absolute;
+	margin-top:785px;
+	-webkit-filter:drop-shadow(10px 10px 10px gray);
+	cursor:pointer;
+}
+#backButton:active/*返回按鈕按下觸發*/
+{
+	margin-left:2px;
+	margin-top:787px;
+	-webkit-filter:drop-shadow(4px 4px 2px gray);
+	cursor:pointer;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*商店金錢(通用)*/
+.shopMoneyDiv/*商店金錢Div*/
+{
+	position:fixed;
+	width:240px;
+	height:75px;
+	left:50%;
+	margin-left:-130px;
+	border:dotted thick;
+	border-color:#F583D8;
+	border-radius:10px;
+	border-top:none;
+	background:rgba(240,194,230,0.5);
+}
+.shopMoneyImg/*商店金錢圖片*/
+{
+	position:absolute;
+	width:50px;
+	margin-left:15px;
+	margin-top:7px;
+}
+.shopMoney/*商店金錢*/
+{
+	position: absolute;
+	font-family: CaifongFont;
+	font-weight: bold;
+	font-size: 60px;
+	color: white;
+	margin-left: 70px;
+	margin-top: 7px;
+	text-shadow: 2px 2px 3px #000000;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*index*/
+#indexBody/*主開始畫面背景*/
+{
+	cursor:default;
+	background:url(img/background/titleBack.jpg) center center fixed no-repeat;
+	background-size:cover;
+	overflow-y:hidden;
+}
+#indexTitle/*標題*/
+{
+	position:absolute;
+	width:1200px;
+	left:50%;
+	margin:80px -630px;
+}
+#indexAllMenuButton/*三個按鈕介面位置*/
+{
+	width: 960px;
+	height: 800px;
+	position:absolute;	
+	left: 50%;
+	top: 50%;
+	margin: -150px -500px;
+}
+.indexMenuButton/*三個按鈕樣式*/
+{
+	font-family: CatFont;
+	color: #FFFFFF;
+	border-radius: 37px;
+	text-align: center;
+	border: 9px outset #CFCFCF;
+	box-shadow: 7px 9px 15px 0px;
+	font-size: 60px;
+	margin-left: 250px;
+	margin-right: 250px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-shadow: 2px 2px 1px #000000;
+}
+.indexMenuButton:hover/*滑鼠移上三個按鈕*/
+{
+	cursor: pointer;
+	text-shadow: 0px 0px 0px;
+}
+.indexMenuButton:active/*滑鼠點擊三個按鈕*/
+{
+	border: 9px inset #CFCFCF;
+}
+#indexReset/*重置*/
+{
+ position:absolute;
+ padding:4px 15px;
+ margin-left:1750px;
+ margin-top:760px;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*HowToPlay*/
+#howBody/*玩法介紹背景*/
+{
+	cursor:default;
+	background:url(img/background/howBack.jpg);
+	width:830;
+	height:380;
+}
+#howPlay/*玩法介紹文字樣式*/
+{
+	font-family: CatFont, 標楷體, sans-serif;
+	font-size: 50px;
+	color: white;
+	text-shadow: 4px 4px 5px #000000;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*Developers*/
+#developersBody/*作者簡介背景*/
+{
+	cursor:default;
+	background:url(img/background/developersBackOut.jpg) center center fixed no-repeat;
+	background-size:cover;
+}
+#developersBack/*半透明的背景*/
+{
+	position:absolute;
+	width:1500px;
+	height:600px;
+	margin-left:200px;
+	margin-top:170px;
+}
+#developersTable/*作者簡介表格*/
+{
+	color:#3C34F0;
+	width: 1500px;
+	height: 600px;
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -750px;
+	margin-top: -300px;
+	text-align: center;
+	font-family: CaifongFont;
+	font-size:50px;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*AllStory*/
+#storyBody/*故事背景+文字樣式*/
+{
+	cursor:default;
+	background:url(img/background/storyBack.jpg) center center fixed no-repeat;
+	font-family:CatFont;
+	font-size:40px;
+	text-align:center;
+	color:#A7EAFF;
+}
+.storyNextPageButton/*下一頁按鈕*/
+{
+	bottom:10%;
+	right:20%;
+	position:absolute;
+	-webkit-filter:drop-shadow(4px 4px 8px white);
+}
+.storyNextPageButton:active/*下一頁按鈕按下觸發*/
+{
+	cursor:pointer;
+	bottom:9.5%;
+	right:19.5%;
+	-webkit-filter:drop-shadow(4px 4px 4px gray);
+}
+/*設計故事文字淡出*/
+.storyLine1
+{
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 3s;
+}
+.storyLine2
+{
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 6s;
+}
+.storyLine3
+{
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 9s;
+}
+.storyLine4
+{
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 12s;
+}
+.storyLine5
+{
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 15s;
+}
+.storyLine6
+{
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 18s;
+}
+.storyLine7
+{
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 21s;
+}
+#storyNextPageButton0,#storyNextPageButton1,#storyNextPageButton3,#storyNextPageButton5
+{
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 24s;
+}
+#storyNextPageButton0_1,#storyNextPageButton5_1
+{
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 21s;
+}
+#storyNextPageButton2,#storyNextPageButton4,#storyNextPageButton5_2,#storyNextPageButton6
+{
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 18s;
+}
+#theEndPic
+{
+	position:absolute;
+	width:1000px;
+	margin-left:-495px;
+	margin-top:-550px;
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 20s;
+}
+#THE_END
+{
+	font-size:90px;
+	margin-top:180px;
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 30s;
+}
+/*設計故事文字淡出*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*GameHub*/
+#hubBody/*遊戲大廳背景*/
+{
+	cursor:default;
+	background:url(img/background/hubBack.jpg) center center fixed no-repeat;
+}
+#hubRole/*角色*/
+{
+	width: 500px;
+	position:absolute;
+	margin-left: 80px;
+	margin-top: 70px;
+}
+#hubMoneyImg/*金錢圖片位置*/
+{
+	position:absolute;
+	margin-top:650px;
+	margin-left:190px;
+}
+#hubMoney/*金錢位置*/
+{
+	position:absolute;
+	font-size:55px;
+	font-family:CaifongFont;
+	margin-top:658px;
+	margin-left:275px;
+	font-weight:bold;
+}
+#hubDrugImg/*藥水圖片位置*/
+{
+	position:absolute;
+	width:60px;
+	margin-top:745px;
+	margin-left:195px;
+}
+#hubDrug/*藥水位置*/
+{
+	position:absolute;
+	font-size:55px;
+	font-family:CaifongFont;
+	margin-top:749px;
+	margin-left:275px;
+	font-weight:bold;
+}
+.hubButton/*所有大廳按鈕*/
+{
+	-webkit-filter:drop-shadow(10px 10px 10px black);
+	cursor: pointer;
+}
+.hubButton:active/*所有大廳按鈕移上觸發*/
+{
+	cursor: pointer;
+	-webkit-filter:drop-shadow(7px 7px 4px black);
+}
+#hubBattleStartButton/*開始戰鬥按鈕*/
+{
+	position: absolute;
+	margin-left:530px;
+	margin-top:40px;
+}
+#hubLastButton/*上一關按鈕*/
+{
+	margin-left:580px;
+	margin-top:140px;
+	position:absolute;
+}
+#hubNextButton/*下一關按鈕*/
+{
+	margin-left:800px;
+	margin-top:180px;
+	position:absolute;
+}
+#hubShopButton/*商店按鈕*/
+{
+	position: absolute;
+	margin-left:1170px;
+	margin-top:290px;
+}
+#hubAtlasButton/*圖鑑按鈕*/
+{
+	position:absolute;
+	margin-left:800px;
+	margin-top:540px;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*Battle*/
+#battleBody/*戰鬥背景*/
+{
+	cursor:default;
+	background:url(img/background/battleBack.jpg) center center fixed no-repeat;
+	background-size:cover;
+	overflow:hidden;
+}
+#battleRole/*戰鬥角色*/
+{
+	width: 400px;
+	position:absolute;
+	margin-left: 190px;
+	margin-top: 430px;
+}
+#battleRoleHpLabel/*戰鬥血條文字*/
+{
+	font-family:CatFont;
+	font-size:30px;
+	position: absolute;
+	margin-left: 200px;
+	margin-top: 890px;
+}
+#battleRoleHp::-webkit-meter-bar/*血條樣式*/
+{
+	width: 250px;
+	height: 23px;
+}
+#battleRoleNowHp/*角色現在血量*/
+{	
+	position:absolute;
+	font-family:CaifongFont;
+	font-size:22px;
+	font-weight:bold;
+	margin-top:893px;
+	margin-left:340px;
+}
+#battleRoleSlash/*人物斜線*/
+{
+	position:absolute;
+	font-family:CaifongFont;
+	font-size:16px;
+	font-weight:bold;
+	margin-top:897px;
+	margin-left:405px;
+}
+#battleRoleAllHp/*角色全部血量*/
+{
+	position:absolute;
+	font-family:CaifongFont;
+	font-size:22px;
+	font-weight:bold;
+	margin-top:893px;
+	margin-left:415px;
+}
+#battleCat/*戰鬥喵*/
+{
+	position:absolute;
+	margin-left: 800px;
+}
+#battleCatName/*戰鬥喵名字位置*/
+{
+	font-family:CatFont;
+	font-size:80px;
+	color:white;
+	position: absolute;
+	margin-left:80px;
+	margin-top:50px
+}
+#battleCatHp/*喵血條樣式*/
+{
+	position:absolute;
+	width: 1450px;
+	height: 45px;
+	margin-left:350px;
+	margin-top:73px
+}
+#battleCatNowHp/*喵現在血量*/
+{
+	position:absolute;
+	font-family:CaifongFont;
+	font-weight:bold;
+	font-size:50px;
+	margin-left:800px;
+	margin-top:68px;
+}
+#battleCatSlash/*喵斜線*/
+{
+	position:absolute;
+	font-family:CaifongFont;
+	font-weight:bold;
+	font-size:30px;
+	margin-left:1040px;
+	margin-top:81px;
+}
+#battleCatAllHp/*喵全部血量*/
+{
+	position:absolute;
+	font-family:CaifongFont;
+	font-weight:bold;
+	font-size:50px;
+	margin-left:1080px;
+	margin-top:68px;
+}
+#battleDrug/*戰鬥藥水*/
+{
+	margin-top:800px;
+	margin-left:30px;
+	-webkit-filter:drop-shadow(7px 7px 5px black);
+}
+#battleDrug:hover/*戰鬥藥水移上觸發*/
+{
+	cursor:pointer;
+}
+#battleDrug:active/*戰鬥藥水按下觸發*/
+{
+	margin-top:801px;
+	margin-left:31px;
+}
+#battleDrugAmount/*戰鬥藥水數量*/
+{
+	position:absolute;
+	font-weight:bold;
+	margin-left:65px;
+	margin-top:-60px;
+	font-family:CaifongFont;
+	font-size:30px;
+}
+#battleDrugAmount:hover/*戰鬥藥水數量移上觸發*/
+{
+	cursor:pointer;
+}
+#battleResult/*戰鬥報表*/
+{
+	visibility:hidden;
+	position: absolute;
+	margin-left: 480px;
+	margin-top: 160px;
+	-webkit-filter:drop-shadow(7px 7px 6px black);
+}
+#battleWinResult/*勝利報表*/
+{
+	visibility:hidden;
+	position:absolute;
+	width:350px;
+	font-family:CatFont;
+	text-align:center;
+	font-size:30px;
+	color:#FF4D24;
+	margin-left:760px;
+	margin-top:-585px;
+}
+#battleLoseResult/*失敗報表*/
+{
+	visibility:hidden;
+	position:absolute;
+	width:400px;
+	font-family:CatFont;
+	text-align:center;
+	font-size:30px;
+	color:#003FAE;
+	margin-left:735px;
+	margin-top:-585px;
+}
+#battleCloseButton/*關閉按鈕*/
+{
+	visibility:hidden;
+	position:absolute;
+	margin-left:740px;
+	margin-top:615px;
+	z-index:1;
+	-webkit-filter:drop-shadow(5px 5px 4px black);
+}
+#battleCloseButton:hover/*關閉按鈕移上觸發*/
+{
+	cursor:pointer;
+}
+#battleCloseButton:active/*關閉按鈕按下觸發*/
+{
+	-webkit-filter:drop-shadow(3px 3px 2px black);
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*ShopMenu*/
+#shopMenuBody/*商店按鈕背景*/
+{
+	background:url(img/background/shopMenuBack.jpg) center center fixed no-repeat;
+	background-size:cover;
+	cursor:default;
+}
+#shopRoleMenu/*商店角色按鈕*/
+{
+	position:absolute;
+	margin-left:25px;
+	margin-top:80px;
+	-webkit-filter:drop-shadow(6px 6px 6px black);
+}
+#shopRoleMenu:active/*商店角色按鈕移上觸發*/
+{
+	margin-left:28px;
+	margin-top:83px;
+	-webkit-filter:drop-shadow(4px 4px 2px black);
+}
+#shopArmsMenu/*商店武器按鈕*/
+{
+	position:absolute;
+	margin-left:28px;
+	margin-top:280px;
+	-webkit-filter:drop-shadow(6px 6px 6px black);
+}
+#shopArmsMenu:active/*商店武器按鈕移上觸發*/
+{
+	margin-left:31px;
+	margin-top:283px;
+	-webkit-filter:drop-shadow(4px 4px 2px black);
+}
+#shopDrugMenu/*商店藥水按鈕*/
+{
+	position:absolute;
+	margin-left:26px;
+	margin-top:530px;
+	-webkit-filter:drop-shadow(6px 6px 6px black);
+}
+#shopDrugMenu:active/*商店藥水按鈕移上觸發*/
+{
+	margin-left:29px;
+	margin-top:533px;
+	-webkit-filter:drop-shadow(4px 3px 2px black);
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*Roles*/
+#rolesBody/*角色商店背景*/
+{
+	background:url(img/background/roleBack.jpg) center center fixed no-repeat;
+	background-size:cover;
+	cursor:default;
+}
+.rolesDiv/*角色商店Div*/
+{
+	height: 295px;
+	border: 12px ridge;
+	border-radius: 30px;
+	background:url(img/background/roleDivBack.jpg) center center scroll no-repeat;
+	background-size:cover;
+}
+.rolesTable/*角色商店表格*/
+{
+	height:100px;
+	border-top: none;
+	border-bottom: none;
+	border-left:none;
+	border-right:none;
+}
+.rolesTd/*角色商店Td*/
+{
+	border-top:none;
+	border-bottom:none;
+	border-left:none;
+	border-color:black;
+}
+.rolesRole/*商店角色0*/
+{
+	width:230px;
+}
+.rolesStory/*角色故事*/
+{
+	text-align:left;
+	width:900px;
+	font-family:CaifongFont;
+	font-size:50px;
+	font-weight:bolder;
+}
+.rolesBuyButton/*角色商店購買按鈕*/
+{
+	position:absolute;
+	margin-left:40px;
+	margin-top:-140px;
+	-webkit-filter:drop-shadow(5px 5px 12px black);
+	cursor:pointer;
+}
+.rolesBuyButton:active/*角色商店購買按鈕按下觸發*/
+{
+	cursor:pointer;
+	margin-left:42px;
+	margin-top:-138px;
+	-webkit-filter:drop-shadow(3px 3px 7px black);
+}
+.rolesChooseButton/*角色選擇按鈕*/
+{
+	visibility:hidden;
+	position:absolute;
+	margin-left:20px;
+	margin-top:-120px;
+	-webkit-filter:drop-shadow(5px 5px 12px black);
+	cursor:pointer;	
+}
+.rolesChooseButton:active/*角色商店購買按鈕按下觸發*/
+{
+	cursor:pointer;
+	margin-left:22px;
+	margin-top:-118px;
+	-webkit-filter:drop-shadow(3px 3px 7px black);
+}
+.rolesMoneyImg/*角色價格圖式*/
+{
+	position:absolute;
+	margin-top:70px;
+	margin-left:80px;
+	width:50px;
+}
+.rolesPrice/*角色價格*/
+{
+	position:absolute;
+	margin-top:80px;
+	margin-left:140px;
+	text-align:center;
+	font-family:CaifongFont;
+	font-size:40px;
+	font-weight:bold;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*Arms*/
+#armsBody/*武器背景*/
+{
+	background:url(img/background/armsBack.jpg) center center fixed no-repeat;
+	background-size:cover;
+	cursor:default;
+}
+#armsNowDiv/*當前武器Div*/
+{
+	position:absolute;
+	background:rgba(255,255,255,0.6);
+	width:350px;
+	height:400px;
+	border:solid 5px;
+	border-radius:30px;
+	margin-left:200px;
+	margin-top:200px;
+}
+#armsNowArms1/*武器1在商店的位置*/
+{
+	visibility:hidden;
+	position:absolute;
+	margin-left:25px;
+	margin-top:100px;
+}
+#armsNowArms2/*武器2在商店的位置*/
+{
+	visibility:hidden;
+	position:absolute;
+	margin-left:150px;
+	margin-top:25px;
+}
+#armsNowArms3/*武器3在商店的位置*/
+{
+	visibility:hidden;
+	position:absolute;
+	margin-left:25px;
+	margin-top:75px;
+}
+#armsNowArms4/*武器4在商店的位置*/
+{
+	visibility:hidden;
+	position:absolute;
+	margin-left:25px;
+	margin-top:60px;
+}
+#armsNowArms5/*武器5在商店的位置*/
+{
+	visibility:hidden;
+	position:absolute;
+	margin-left:25px;
+	margin-top:150px;
+}
+#armsNowArms6/*武器6在商店的位置*/
+{
+	visibility:hidden;
+	position:absolute;
+	margin-left:72px;
+	margin-top:25px;
+}
+#armsNowArms7/*武器7在商店的位置*/
+{
+	visibility:hidden;
+	position:absolute;
+	margin-left:25px;
+	margin-top:50px;
+}
+#armsNowArms8/*武器8在商店的位置*/
+{
+	visibility:hidden;
+	position:absolute;
+	margin-left:25px;
+	margin-top:55px;
+}
+#armsNowArms9/*武器9在商店的位置*/
+{
+	visibility:hidden;
+	position:absolute;
+	margin-left:25px;
+	margin-top:90px;
+}
+#armsNowArms10/*武器10在商店的位置*/
+{
+	visibility:hidden;
+	position:absolute;
+	margin-left:60px;
+	margin-top:25px;
+}
+#armsATKLabel/*武器攻擊力文字*/
+{
+	position:absolute;
+	font-family:CaifongFont;
+	font-size:50px;
+	margin-left:210px;
+	margin-top:635px;
+	font-weight:bold;
+	color:white;
+}
+#armsATK/*武器攻擊力*/
+{
+	font-size:60px;
+}
+#armsNextDiv/*下一把武器Div*/
+{
+	position:absolute;
+	background:rgba(255,255,255,0.6);
+	width:350px;
+	height:400px;
+	border:solid 5px;
+	border-radius:30px;
+	margin-left:950px;
+	margin-top:200px;
+}
+#armsNextArms/*下一把武器*/
+{
+	position:absolute;
+	padding-left:25px;
+	padding-top:30px;
+}
+#armsMoneyImg/*武器價格圖式*/
+{
+	position:absolute;
+	width:50px;
+	margin-left:985px;
+	margin-top:635px;
+}
+#armsPrice/*武器價格*/
+{
+	position:absolute;
+	font-family:CaifongFont;
+	font-size:60px;
+	margin-left:1050px;
+	margin-top:635px;
+	font-weight:bold;
+	color:white;
+}
+#armsArrow/*武器進化箭頭*/
+{
+	position:absolute;
+	margin-left:630px;
+	margin-top:280px;
+}
+#armsEvolotionButton/*武器進化按鈕*/
+{
+	position:absolute;
+	margin-left:610px;
+	margin-top:630px;
+	-webkit-filter:drop-shadow(5px 5px 12px black);
+	cursor:pointer;
+}
+#armsEvolotionButton:active/*武器進化按鈕按下觸發*/
+{
+	cursor:pointer;
+	margin-left:612px;
+	margin-top:632px;
+	-webkit-filter:drop-shadow(3px 3px 7px black);
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*Drug*/
+#drugBody/*藥水背景*/
+{
+	background:url(img/background/drugBack.jpg) center center fixed no-repeat;
+	background-size:cover;
+	overflow:hidden;
+	cursor:default;
+}
+#drugDrug/*藥水商店的藥水*/
+{
+	position:absolute;
+	margin-left:-550px;
+	margin-top:150px;
+}
+#drugDrugAmount/*藥水商店的藥水數量*/
+{
+	position:absolute;
+	font-family:CaifongFont;
+	font-size:70px;
+	margin-left:735px;
+	margin-top:-670px;
+	font-weight:bold;
+}
+#drugPot/*藥水爐子*/
+{
+	margin-left:370px;
+	margin-top:310px;
+}
+#drugMoneyImg/*藥水商店價格圖式*/
+{
+	position:absolute;
+	width:55px;
+	margin-left:-510px;
+	margin-top:510px;
+}
+#drugPrice/*藥水價格*/
+{
+	position:absolute;
+	font-family:CaifongFont;
+	font-size:70px;
+	margin-left:-440px;
+	margin-top:510px;
+	font-weight:bold;
+	color:white;
+}
+#drugBuyButton/*購買藥水按鈕*/
+{
+	position:absolute;
+	margin-left:-550px;
+	margin-top:600px;
+	-webkit-filter:drop-shadow(8px 8px 10px gray);
+	cursor:pointer;
+}
+#drugBuyButton:active/*購買藥水按鈕按下觸發*/
+{
+	margin-left:-548px;
+	margin-top:602px;
+	-webkit-filter:drop-shadow(4px 4px 6px gray);
+	cursor:pointer;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*Atlas*/
+#atlasBody/*圖鑑背景*/
+{
+	background:url(img/background/atlasBack.jpg);
+	background-size:cover;
+	overflow:hidden;
+	cursor:default;
+}
+#atlasCat1/*第1隻喵*/
+{
+	margin-left:150px;
+	margin-top:110px;
+	cursor:pointer;
+}
+.atlasCatLine1/*其餘的第一排的喵*/
+{
+	visibility:hidden;
+	margin-left:50px;
+	margin-top:110px;
+	cursor:pointer;
+}
+#atlasCat8/*第8隻喵*/
+{
+	visibility:hidden;
+	margin-left:60px;
+	margin-top:10px;
+	cursor:pointer;
+}
+.atlasCatLine2/*其餘的第二排的喵*/
+{
+	visibility:hidden;
+	margin-left:50px;
+	margin-top:10px;
+	cursor:pointer;
+}
+#atlasCat15/*第15隻喵*/
+{
+	visibility:hidden;
+	margin-left:150px;
+	margin-top:10px;
+	cursor:pointer;
+}
+.atlasCatLine3/*其餘的第三排的喵*/
+{
+	visibility:hidden;
+	margin-left:50px;
+	margin-top:10px;
+	cursor:pointer;
+}
+#atlasDivBack/*黑色半透明背景*/
+{
+	visibility:hidden;
+	position:absolute;
+	background:url(img/background/atlasDivBack.png);
+	margin-left:-50px;
+	margin-top:-860px;
+	width:2000px;
+	height:1000px;
+}
+.atlasDiv/*圖鑑Div*/
+{
+	visibility:hidden;
+	position:absolute;
+	margin-left:340px;
+	margin-top:-600px;
+	height: 470px;
+	border: 10px dashed;
+	border-radius: 30px;
+	background:rgba(255,255,255,0.8);
+}
+.atlasTable/*圖鑑Table*/
+{
+	height:100px;
+	border-top: none;
+	border-bottom: none;
+	border-left:none;
+	border-right:none;
+}
+.atlasTd/*圖鑑Td*/
+{
+	border-top:none;
+	border-bottom:none;
+	border-left:none;
+	border-color:black;
+}
+.atlasCat/*圖鑑*/
+{
+	width:327px;
+}
+.atlasStoryCatName/*圖鑑喵名稱*/
+{
+	text-align:left;
+	width:900px;
+	font-family:CaifongFont;
+	font-size:70px;
+	color:red;
+	font-weight:bolder;
+}
+.atlasStory/*圖鑑故事*/
+{
+	text-align:left;
+	width:900px;
+	font-family:CaifongFont;
+	font-size:50px;
+	font-weight:bolder;
+}
+.atlasCloseButton/*圖鑑關閉按鈕*/
+{
+	position:absolute;
+	margin-left:1170px;
+	margin-top:-465px;
+	cursor:pointer;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*右鍵選單*/
+#contextMenu /*右鍵選單*/
+{
+	position:absolute;
+	background-color:#F0B2F4;
+	border: #E90EFF 2px double;
+	border-radius:20px;
+	cursor:pointer;
+	width:220px;
+	line-height:30px;
+	font-family:CaifongFont;
+ 	font-size: 20pt;
+	color:white;
+	font-weight:bolder;
+	visibility:hidden;
+}
+.menuItems /*選單內物件*/
+{
+	padding:4px 15px;
+}

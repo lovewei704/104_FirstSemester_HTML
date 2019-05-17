@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>戰鬥畫面</title>
+<link href="design.css" rel="stylesheet" type="text/css">
+</head>
+
+<script type="text/javascript" src="Javascript.js" charset="BIG5"></script>
+
+<body onLoad="BattleOnloadEvent()" onselectstart="return false" id="battleBody">
+
+<audio autoplay loop>
+	<source src="bgm/indexBgm.mp3"></source>
+</audio>
+
+<img src="img/role/role0.png" alt="主人公" id="battleRole">
+<p id="battleRoleHpLabel">HP：<meter id="battleRoleHp" min="0" max="100" value="100" low="0.1" high="0.2" optimum="0"></meter></p>
+<span id="battleRoleNowHp">10000</span><span id="battleRoleSlash">/</span><span id="battleRoleAllHp">10000</span>
+<img src="img/cat/cat1.png" alt="鄰居喵" id="battleCat" onClick="PlayerAttack()">
+<p id="battleCatName">鄰居喵</p><meter id="battleCatHp" min="0" max="100" value="100" low="0.1" high="0.2" optimum="0"></meter>
+<span id="battleCatNowHp">10000000</span><span id="battleCatSlash">/</span><span id="battleCatAllHp">10000000</span>
+<img src="img/item/drug.png" id="battleDrug" alt="藥水" onClick="DrinkDrug()">
+<p id="battleDrugAmount" onClick="DrinkDrug()">10</p>
+<img src="img/item/result.png" alt="結果" id="battleResult">
+<img src="img/button/closeButton.png" alt="確認" id="battleCloseButton" onClick="CloseResult()">
+<div id="battleWinResult">
+<h1>勝利！！</h1>
+<p><span id="battleWinCat">xx喵</span>圖鑑已開啟！</p>
+<p>獲得&nbsp;<img src="img/item/money.png" alt="$" style="width:30px;">&nbsp;<span id="battleGainMoney">982</span></p>
+</div>
+<div id="battleLoseResult">
+<h1>失敗...</h1>
+<p>可以返回上一關賺更多的<img src="img/item/money.png" alt="$" style="width:30px;"></p>
+<p>
+<span id="battleLoseMsg">購買更多的藥水</span>
+</p>
+</div>
+
+</body>
+</html>

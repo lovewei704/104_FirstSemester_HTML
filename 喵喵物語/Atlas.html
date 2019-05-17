@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>圖鑑</title>
+<link href="design.css" rel="stylesheet" type="text/css">
+</head>
+
+<script type="text/javascript" src="Javascript.js" charset="BIG5"></script>
+
+<body onselectstart="return false" id="atlasBody" onLoad="AtlasOnLoadEvent()">
+
+<audio autoplay loop>
+	<source src="bgm/storyBgm.mp3"></source>
+</audio>
+
+<img src="img/button/back.png" alt="返回" id="backButton" onClick="BackToHub()">
+<img src="img/cat/cat1_die.png" alt="鄰居喵" id="atlasCat1" onClick="ShowCatStory(0)">
+<img src="img/cat/cat2_die.png" alt="武士喵" id="atlasCat2" class="atlasCatLine1" onClick="ShowCatStory(1)">
+<img src="img/cat/cat3_die.png" alt="歌星喵" id="atlasCat3" class="atlasCatLine1" onClick="ShowCatStory(2)">
+<img src="img/cat/cat4_die.png" alt="漁父喵" id="atlasCat4" class="atlasCatLine1" onClick="ShowCatStory(3)">
+<img src="img/cat/cat5_die.png" alt="天使喵" id="atlasCat5" class="atlasCatLine1" onClick="ShowCatStory(4)">
+<img src="img/cat/cat6_die.png" alt="太空喵" id="atlasCat6" class="atlasCatLine1" onClick="ShowCatStory(5)">
+<img src="img/cat/cat7_die.png" alt="特務喵" id="atlasCat7" class="atlasCatLine1" onClick="ShowCatStory(6)">
+<img src="img/cat/cat8_die.png" alt="宅宅喵" id="atlasCat8" onClick="ShowCatStory(7)">
+<img src="img/cat/cat9_die.png" alt="獅子喵" id="atlasCat9" class="atlasCatLine2" onClick="ShowCatStory(8)">
+<img src="img/cat/cat10_die.png" alt="埃及喵" id="atlasCat10" class="atlasCatLine2" onClick="ShowCatStory(9)">
+<img src="img/cat/cat11_die.png" alt="觸手喵" id="atlasCat11" class="atlasCatLine2" onClick="ShowCatStory(10)">
+<img src="img/cat/cat12_die.png" alt="咖哩喵" id="atlasCat12" class="atlasCatLine2" onClick="ShowCatStory(11)">
+<img src="img/cat/cat13_die.png" alt="忍者喵" id="atlasCat13" class="atlasCatLine2" onClick="ShowCatStory(12)">
+<img src="img/cat/cat14_die.png" alt="隱形喵" id="atlasCat14" class="atlasCatLine2" onClick="ShowCatStory(13)">
+<img src="img/cat/cat15_die.png" alt="科學喵" id="atlasCat15" onClick="ShowCatStory(14)">
+<img src="img/cat/cat16_die.png" alt="吸血喵" id="atlasCat16" class="atlasCatLine3" onClick="ShowCatStory(15)">
+<img src="img/cat/cat17_die.png" alt="魯道喵" id="atlasCat17" class="atlasCatLine3" onClick="ShowCatStory(16)">
+<img src="img/cat/cat18_die.png" alt="孫悟喵" id="atlasCat18" class="atlasCatLine3" onClick="ShowCatStory(17)">
+<img src="img/cat/cat19_die.png" alt="閃光喵" id="atlasCat19" class="atlasCatLine3" onClick="ShowCatStory(18)">
+<img src="img/cat/cat20_die.png" alt="老誕喵" id="atlasCat20" class="atlasCatLine3" onClick="ShowCatStory(19)">
+<img src="img/cat/cat21_die.png" alt="喵" id="atlasCat21" class="atlasCatLine3" onClick="ShowCatStory(20)">
+
+<div id="atlasDivBack"></div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat1.png" alt="鄰居喵" class="atlasCat" onMouseOver="onAtlasMouseOver(1)" onMouseOut="onAtlasMouseOut(1)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">鄰居喵</h1>
+        	<p class="atlasStory">普通的小貓，除了吃跟睡什麼都不會。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat2.png" alt="武士喵" class="atlasCat" onMouseOver="onAtlasMouseOver(2)" onMouseOut="onAtlasMouseOut(2)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">武士喵</h1>
+        	<p class="atlasStory">安靜的黑喵，平常不太說話，總是一個人行動。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat3.png" alt="歌星喵" class="atlasCat" onMouseOver="onAtlasMouseOver(3)" onMouseOut="onAtlasMouseOut(3)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">歌星喵</h1>
+            <p class="atlasStory">從小立志當個名揚國際的超級大歌星，可是不知怎的只要一開口就倒一片的聽眾，據本喵說是因為太好聽所以暈倒了，然而那些聽眾全部都喪失了那一段記憶。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat4.png" alt="漁父喵" class="atlasCat" onMouseOver="onAtlasMouseOver(4)" onMouseOut="onAtlasMouseOut(4)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">漁父喵</h1>
+            <p class="atlasStory">成天划著一艘小船，唱著自編曲，四處販賣自己做的包包，只要在河邊就能聽到那首熟悉的歌曲，有傳言說遇見牠，要小心自己的荷包。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat5.png" alt="天使喵" class="atlasCat" onMouseOver="onAtlasMouseOver(5)" onMouseOut="onAtlasMouseOut(5)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">天使喵</h1>
+            <p class="atlasStory">據說擁有重要的使命，卻因為一場車禍失去了記憶，目前被一般家庭領養。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat6.png" alt="太空喵" class="atlasCat" onMouseOver="onAtlasMouseOver(6)" onMouseOut="onAtlasMouseOut(6)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">太空喵</h1>
+            <p class="atlasStory">其實只是想抓魚，不小心被魚缸套住頭，拿不下來而已。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat7.png" alt="特務喵" class="atlasCat" onMouseOver="onAtlasMouseOver(7)"  onMouseOut="onAtlasMouseOut(7)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">特務喵</h1>
+            <p class="atlasStory">據說被送入了秘密基地訓練過，可以在一秒內留下五十道貓爪印，是老鼠的大剋星。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat8.png" alt="宅宅喵" class="atlasCat" onMouseOver="onAtlasMouseOver(8)" onMouseOut="onAtlasMouseOut(8)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">宅宅喵</h1>
+            <p class="atlasStory">總是出現在日本秋葉原，在那建設了秘密基地，擁有強大的電腦技能，據說某些F B社團是他在經營的。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat9.png" alt="獅子喵" class="atlasCat" onMouseOver="onAtlasMouseOver(9)" onMouseOut="onAtlasMouseOut(9)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">獅子喵</h1>
+            <p class="atlasStory">一隻非常膽小的喵，總是被喵欺負，因此決定要一直帶著獅子樣式的帽子，雖然還是會被欺負就是了。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat10.png" alt="埃及喵" class="atlasCat" onMouseOver="onAtlasMouseOver(10)" onMouseOut="onAtlasMouseOut(10)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">埃及喵</h1>
+            <p class="atlasStory">原先是博物館裡的木乃伊展示品，卻在某一天撕開了繃帶活了過來，據說是法老王的化身。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat11.png" alt="觸手喵" class="atlasCat" onMouseOver="onAtlasMouseOver(11)" onMouseOut="onAtlasMouseOut(11)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">觸手喵</h1>
+            <p class="atlasStory">為了尋找失落的光劍，而來到地球。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat12.png" alt="咖哩喵" class="atlasCat" onMouseOver="onAtlasMouseOver(12)" onMouseOut="onAtlasMouseOut(12)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">咖哩喵</h1>
+            <p class="atlasStory">因為太喜歡咖哩而把自己變成咖哩的樣子，身上總是飄著一股濃濃的咖哩味，立志吃遍全天下的咖哩。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat13.png" alt="忍者喵" class="atlasCat" onMouseOver="onAtlasMouseOver(13)" onMouseOut="onAtlasMouseOut(13)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">忍者喵</h1>
+            <p class="atlasStory">為了吃到在最湍急的河流裡，百年難得一見的超美味的魚，而進行了修行，據說領悟了忍者最極致的秘密，一隻手裏劍可以擊中十隻以上的魚。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat14.png" alt="隱形喵" class="atlasCat" onMouseOver="onAtlasMouseOver(14)" onMouseOut="onAtlasMouseOut(14)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">隱形喵</h1>
+            <p class="atlasStory">某天喝下了科學喵給的奇怪的果汁後，就變成了隱形的樣子，如果晚上聽到喵叫聲卻沒看到喵，可能就是牠在跟你打招呼。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat15.png" alt="科學喵" class="atlasCat" onMouseOver="onAtlasMouseOver(15)" onMouseOut="onAtlasMouseOut(15)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">科學喵</h1>
+            <p class="atlasStory">千年前製成了長生不老藥，活到了現今，興趣是在他的秘密實驗室，將抓來的貓咪進行改造。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat16.png" alt="吸血喵" class="atlasCat" onMouseOver="onAtlasMouseOver(16)" onMouseOut="onAtlasMouseOut(16)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">吸血喵</h1>
+            <p class="atlasStory">倒在路邊危在旦夕的喵，因吸血鬼輸血而復活，成為唯一的吸血喵，不敢吸血，很喜歡西瓜汁。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat17.png" alt="魯道喵" class="atlasCat" onMouseOver="onAtlasMouseOver(17)" onMouseOut="onAtlasMouseOut(17)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">魯道喵</h1>
+            <p class="atlasStory">載著聖誕老喵喵的喵群領隊，擁有飛天的能力，沒有了牠禮物就無法如期送達。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat18.png" alt="孫悟喵" class="atlasCat" onMouseOver="onAtlasMouseOver(18)" onMouseOut="onAtlasMouseOut(18)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">孫悟喵</h1>
+            <p class="atlasStory">因大鬧喵宮而被懲罰，壓在孫中山下面，千年之後隨著和尚喵去西方找魚乾。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat19.png" alt="閃光喵" class="atlasCat" onMouseOver="onAtlasMouseOver(19)" onMouseOut="onAtlasMouseOut(19)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">閃光喵</h1>
+            <p class="atlasStory">速度非常快的小貓，快到幾乎沒人看過牠，被少數文獻所記載著，據說某動畫角色是參考牠創作出的。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat20.png" alt="老誕喵" class="atlasCat" onMouseOver="onAtlasMouseOver(20)"  onMouseOut="onAtlasMouseOut(20)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">老誕喵</h1>
+            <p class="atlasStory">其實就是聖誕老喵喵，目的是發送禮物給全世界的喵喵，是聖誕老公公的小跟班，跟隨在老公公後方發送禮物。</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+<div class="atlasDiv">
+<table class="atlasTable" border="1">
+	<tr>
+    	<td class="atlasTd">
+			<img src="img/cat/cat21.png" alt="喵" class="atlasCat" onMouseOver="onAtlasMouseOver(21)" onMouseOut="onAtlasMouseOut(21)">
+        </td>
+        <td class="atlasTd" style="border-right:none">
+        	<h1 class="atlasStoryCatName">喵</h1>
+            <p class="atlasStory">「貓～～～～～～～～～～～～～～～」</p>
+        </td>
+    </tr>
+</table>
+<img src="img/button/atlasCloseButton.png" alt="X" class="atlasCloseButton" onClick="AtlasClose()">
+</div>
+</body>
+</html>

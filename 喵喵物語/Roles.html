@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>角色</title>
+<link href="design.css" rel="stylesheet" type="text/css">
+</head>
+
+<script type="text/javascript" src="Javascript.js" charset="BIG5"></script>
+
+<body onselectstart="return false" id="rolesBody" onLoad="RolesOnLoadEvent()">
+<div class="shopMoneyDiv" border="1">
+<img src="img/item/money.png" alt="$" class="shopMoneyImg"><span class="shopMoney">10000</span>
+</div>
+<p>
+<div class="rolesDiv" border="1">
+<table class="rolesTable" border="1">
+	<tr>
+    	<td class="rolesTd">
+			<img src="img/role/role0.png" alt="上班族" class="rolesRole">
+        </td>
+        <td class="rolesTd">
+        	<p class="rolesStory">每天勞累的上班族，最大的夢想是能當上社長，只要翹著腳就能有源源不絕的錢入口袋。</p>
+        </td>
+        <td class="rolesTd" style="border-right:none">
+        	<img src="img/button/buyButton.png" alt="購買" class="rolesBuyButton" hidden>
+            <img src="img/button/rolesChooseButton.png" alt="選擇" class="rolesChooseButton" style="visibility:visible" onClick="ChooseButton0()">
+            <img src="img/item/money.png" alt="$" class="rolesMoneyImg" hidden>
+            <p class="rolesPrice" id="rolesPrice0" hidden>0</p>
+        </td>
+    </tr>
+</table>		
+</div>
+</p>
+<p>
+<div class="rolesDiv" border="1">
+<table class="rolesTable" border="1">
+	<tr>
+    	<td class="rolesTd">
+			<img src="img/role/role1.png" alt="書生" class="rolesRole">
+        </td>
+        <td class="rolesTd">
+        	<p class="rolesStory">人生的目標就是能考上一流的大學，遇見主角後被他的男子氣概所征服，決定追隨他到天涯海角。</p>
+        </td>
+        <td class="rolesTd" style="border-right:none">
+        	<img src="img/button/buyButton.png" alt="購買" class="rolesBuyButton" id="rolesBuyButton1" onClick="BuyButton1()">
+            <img src="img/button/rolesChooseButton.png" alt="選擇" class="rolesChooseButton" id="roleChooseButton1" onClick="ChooseButton1()">
+            <img src="img/item/money.png" alt="$" class="rolesMoneyImg">
+            <p class="rolesPrice" id="rolesPrice1">2000</p>   
+        </td>
+    </tr>
+</table>		
+</div>
+</p>
+<p>
+<div class="rolesDiv" border="1">
+<table class="rolesTable" border="1">
+	<tr>
+    	<td class="rolesTd">
+			<img src="img/role/role2.png" alt="機器人" class="rolesRole">
+        </td>
+        <td class="rolesTd">
+        	<p class="rolesStory">從小陪伴著主人的一具機器人，任務是確保主人的安危，可是不知為什麼當有危險出現時，總是不見他的蹤影。</p>
+        </td>
+        <td class="rolesTd" style="border-right:none">
+        	<img src="img/button/buyButton.png" alt="購買" class="rolesBuyButton" id="rolesBuyButton2" onClick="BuyButton2()">
+            <img src="img/button/rolesChooseButton.png" alt="選擇" class="rolesChooseButton" id="roleChooseButton2" onClick="ChooseButton2()">
+            <img src="img/item/money.png" alt="$" class="rolesMoneyImg">
+            <p class="rolesPrice" id="rolesPrice2">10000</p>
+        </td>
+    </tr>
+</table>		
+</div>
+</p>
+<p>
+<div class="rolesDiv" border="1">
+<table class="rolesTable" border="1">
+	<tr>
+    	<td class="rolesTd">
+			<img src="img/role/role3.png" alt="薑餅人" class="rolesRole">
+        </td>
+        <td class="rolesTd">
+        	<p class="rolesStory">看起來烤得酥脆可口，讓人垂涎的薑餅人，最大的危機就是被人吃進肚子裡，至今仍然是馬拉松的金牌保持人。</p>
+        </td>
+        <td class="rolesTd" style="border-right:none">
+        	<img src="img/button/buyButton.png" alt="購買" class="rolesBuyButton" id="rolesBuyButton3" onClick="BuyButton3()">
+            <img src="img/button/rolesChooseButton.png" alt="選擇" class="rolesChooseButton" id="roleChooseButton3" onClick="ChooseButton3()">
+            <img src="img/item/money.png" alt="$" class="rolesMoneyImg">
+            <p class="rolesPrice" id="rolesPrice3">15000</p>   
+        </td>
+    </tr>
+</table>		
+</div>
+</p>
+<p>
+<div class="rolesDiv" border="1">
+<table class="rolesTable" border="1">
+	<tr>
+    	<td class="rolesTd">
+			<img src="img/role/role4.png" alt="貓娘" class="rolesRole">
+        </td>
+        <td class="rolesTd">
+        	<p class="rolesStory">擁有著貓耳的女性，似乎擁有什麼不可告人的秘密...？</p>
+        </td>
+        <td class="rolesTd" style="border-right:none">
+        	<img src="img/button/buyButton.png" alt="購買" class="rolesBuyButton" id="rolesBuyButton4" onClick="BuyButton4()">
+            <img src="img/button/rolesChooseButton.png" alt="選擇" class="rolesChooseButton" id="roleChooseButton4" onClick="ChooseButton4()">
+            <img src="img/item/money.png" alt="$" class="rolesMoneyImg">
+            <p class="rolesPrice" id="rolesPrice4">30000</p>   
+        </td>
+    </tr>
+</table>		
+</div>
+</p>
+</body>
+</html>

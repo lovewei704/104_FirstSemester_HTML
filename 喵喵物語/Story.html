@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>故事</title>
+<link href="design.css" rel="stylesheet" type="text/css">
+</head>
+
+<script type="text/javascript" src="Javascript.js" charset="BIG5"></script>
+
+<body onselectstart="return false" id="storyBody" onLoad="StoryOnLoadEvent()">
+
+<audio autoplay loop>
+	<source src="bgm/storyBgm.mp3"></source>
+</audio>
+
+<div id="story0" style="display:none">
+<br><br><br>
+<p class="storyLine1">有一天我醒來...</p>
+<p class="storyLine2">發現我的喵喵不見了！</p>
+<p class="storyLine3">鄰居的喵喵也不見了！！</p>
+<p class="storyLine4">全世界的喵喵都不見了！！！！</p>
+<p class="storyLine5">突然！！</p>
+<p class="storyLine6">一道光照下來</p>
+<p class="storyLine7">我看見了聖誕老人的袋子在蠕動！？</p>
+<img src="img/button/nextpage.png" id="storyNextPageButton0" class="storyNextPageButton" alt="下一頁" onClick="Story_Visible()">
+</div>
+<div id="story0_1" style="display:none">
+<br><br><br>
+<p class="storyLine1">啪搭！</p>
+<p class="storyLine2">碰！！</p>
+<p class="storyLine3">一隻喵喵掉下來了！！！！</p>
+<p class="storyLine4">是我鄰居的喵喵！！！</p>
+<p class="storyLine5">我伸手想摸摸牠</p>
+<p class="storyLine6">他居然一口朝我咬下去！！</p>
+<img src="img/button/nextpage.png" id="storyNextPageButton0_1" class="storyNextPageButton" alt="下一頁" onClick="NextPageButton()">
+</div>
+<div id="story1" style="display:none">
+<br><br><br>
+<p class="storyLine1">那是什麼！？</p>
+<p class="storyLine2">鄰居喵喵頭上的針掉了下來！！</p>
+<p class="storyLine3">這時</p>
+<p class="storyLine4">鄰居喵喵朝我蹭了蹭，</p>
+<p class="storyLine5">「貓～貓～」</p>
+<p class="storyLine6">此時我知道</p>
+<p class="storyLine7">拯救全世界的喵喵就靠我了！</p>
+<img src="img/button/nextpage.png" id="storyNextPageButton1" class="storyNextPageButton" alt="下一頁" onClick="NextPageButton()">
+</div>
+<div id="story2" style="display:none">
+<br><br><br>
+<p class="storyLine1">五個月過去了...</p>
+<p class="storyLine2">這五個月來我從喵喵身上拿到了五根針</p>
+<p class="storyLine3">日夜不停的研究</p>
+<p class="storyLine4">卻也沒看出這幾根針的來歷</p>
+<p class="storyLine5">總之繼續努力拯救其他的喵喵吧！</p>
+<img src="img/button/nextpage.png" id="storyNextPageButton2" class="storyNextPageButton" alt="下一頁" onClick="NextPageButton()">
+</div>
+<div id="story3" style="display:none">
+<br><br><br>
+<p class="storyLine1">十個月一眨眼就過去了</p>
+<p class="storyLine2">經過努力的戰鬥</p>
+<p class="storyLine3">我發現自己變強了</p>
+<p class="storyLine4">也在路上遇到了許多同伴</p>
+<p class="storyLine5">一路上的打聽</p>
+<p class="storyLine6">卻也沒聽到我的喵的下落</p>
+<p class="storyLine7">但是總有感覺會找到的！</p>
+<img src="img/button/nextpage.png" id="storyNextPageButton3" class="storyNextPageButton" alt="下一頁" onClick="NextPageButton()">
+</div>
+<div id="story4" style="display:none">
+<br><br><br>
+<p class="storyLine1">已經是第十五個月了...</p>
+<p class="storyLine2">我始終沒見到我的喵</p>
+<p class="storyLine3">明明平常都很乖巧</p>
+<p class="storyLine4">也不會亂跑的</p>
+<p class="storyLine5">到底是去了哪裡呢？</p>
+<img src="img/button/nextpage.png" id="storyNextPageButton4" class="storyNextPageButton" alt="下一頁" onClick="NextPageButton()">
+</div>
+<div id="story5" style="display:none">
+<br><br><br>
+<p class="storyLine1">不知道幾個月過去了...</p>
+<p class="storyLine2">我覺得</p>
+<p class="storyLine3">我已經再也找不到我的喵了</p>
+<p class="storyLine4">告別了我的戰友們</p>
+<p class="storyLine5">我獨自回到了那個冰冷的家</p>
+<p class="storyLine6">走進書房</p>
+<p class="storyLine7">我疲憊的靠在書櫃上...</p>
+<img src="img/button/nextpage.png" id="storyNextPageButton5" class="storyNextPageButton" alt="下一頁" onClick="Story_Visible()">
+</div>
+<div id="story5_1" style="display:none">
+<br><br><br>
+<p class="storyLine1">突然！！！</p>
+<p class="storyLine2">一陣轟隆作響</p>
+<p class="storyLine3">伴隨著漫天的塵埃</p>
+<p class="storyLine4">我看到書櫃中間出現了一個缺口！</p>
+<p class="storyLine5">一股熟悉的感覺從缺口處傳來</p>
+<p class="storyLine6">於是我走了進去...</p>
+<img src="img/button/nextpage.png" id="storyNextPageButton5_1" class="storyNextPageButton" alt="下一頁" onClick="Story_Visible()">
+</div>
+<div id="story5_2" style="display:none">
+<br><br><br>
+<p class="storyLine1">一條長長的紅地毯出現在我眼前</p>
+<p class="storyLine2">地毯的底端有著一個寶座</p>
+<p class="storyLine3">坐在寶座上的</p>
+<p class="storyLine4">居然是我的喵！！</p>
+<p class="storyLine5">「喵～我來拯救你了！」</p>
+<img src="img/button/nextpage.png" id="storyNextPageButton5_2" class="storyNextPageButton" alt="下一頁" onClick="NextPageButton()">
+</div>
+<div id="story6" style="display:none">
+<br><br><br>
+<p class="storyLine1">經過了漫長的尋找</p>
+<p class="storyLine2">我終於找到了我的喵</p>
+<p class="storyLine3">原來</p>
+<p class="storyLine4">牠一直就在我身邊</p>
+<p class="storyLine5">「我再也不會離開你了，」</p>
+<img src="img/item/theEndPic.png" alt="結束照片" id="theEndPic">
+<p id="THE_END">THE END</p>
+</div>
+</body>
+</html>
